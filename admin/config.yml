@@ -1,0 +1,15 @@
+backend:
+  name: github
+  repo: ajbarea/sveltia-github-publish-repro
+  branch: main
+  squash_merges: true
+publish_mode: preview
+media_folder: content/media
+collections:
+  - name: posts
+    label: Posts
+    folder: content/posts
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }

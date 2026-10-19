@@ -1,0 +1,10 @@
+name: on-push
+on:
+  push:
+    branches: [main]
+permissions: {}
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Pushed ${{ github.sha }} by ${{ github.actor }}"

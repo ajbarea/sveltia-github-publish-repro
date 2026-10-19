@@ -7,6 +7,7 @@ Minimal reproduction for Sveltia CMS: pressing Publish on GitHub while a require
 - `admin/index.html` loads Sveltia CMS 0.248.0, which includes the fix. The results below were recorded with 0.241.0.
 - `admin/config.yml` uses the GitHub backend, `publish_mode: preview` and `squash_merges: true`.
 - `.github/workflows/check.yml` runs a job named `check` (`sleep 300`) on every pull request.
+- `.github/workflows/on-push.yml` runs on every push to `main`, to show whether a merge made by the CMS triggers push workflows.
 - A ruleset on `main` requires `check` and has no bypass actors. Auto-merge is allowed in the repository settings.
 
 ## Reproduce in the CMS
